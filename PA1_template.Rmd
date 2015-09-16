@@ -56,7 +56,7 @@ abline(v = mx2, col = "red", lwd = 2)
 abline(v = media2, col = "red", lwd = 2,lty=3)
 ```
 
-The mean steps for day is `r round(mx2,2)` and the median is `r media2`
+The mean steps for day is `r as.numeric(round(mx2,2))` and the median is `r media2`
 
 
 ## Are there differences in activity patterns between weekdays and weekends?

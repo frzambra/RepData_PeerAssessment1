@@ -92,6 +92,7 @@ abline(v = media, col = &quot;red&quot;, lwd = 2,lty=3)</code></pre>
 <h2>Imputing missing values</h2>
 <pre class="r"><code>miss &lt;- length(which(is.na(data$steps)))</code></pre>
 <p>The total number of missing data are 2304</p>
+<p>To imputing missing values were used the mean steps ( all days) in each interval, and the missing values were replaced with this value corresponding to it interval.</p>
 <pre class="r"><code>ix &lt;- match(data[which(is.na(data$steps)),]$interval,meanForInterval$interval)
 dataFilled&lt;-data      
 dataFilled[which(is.na(dataFilled$steps)),]$steps &lt;- meanForInterval$meanSteps[ix]

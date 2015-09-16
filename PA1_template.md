@@ -47,6 +47,8 @@ miss <- length(which(is.na(data$steps)))
 
 The total number of missing data are 2304
 
+To imputing missing values were used the mean steps ( all days) in each interval, and the missing values were replaced with this value corresponding to it interval.
+
 
 ```r
 ix <- match(data[which(is.na(data$steps)),]$interval,meanForInterval$interval)
